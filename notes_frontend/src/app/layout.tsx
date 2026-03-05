@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ToastsProvider } from "@/components/ui/Toasts";
 
 export const metadata: Metadata = {
-  title: "Minimal Next.js App",
-  description: "Ultra-minimal Next.js application",
+  title: "NoteMaster ’96",
+  description: "Retro notes app with tags, search, and autosave.",
 };
 
 export default function RootLayout({
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
-        {children}
+        <ToastsProvider>{children}</ToastsProvider>
       </body>
     </html>
   );

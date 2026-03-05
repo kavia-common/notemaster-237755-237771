@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  /* Retro palette (light, paper/ink) aligned with requested accents */
+  --retro-bg: #f9fafb;
+  --retro-paper: #ffffff;
+  --retro-ink: #111827;
+  --retro-ink-2: #475569;
+
+  --retro-blue: #3b82f6;
+  --retro-cyan: #06b6d4;
+  --retro-red: #ef4444;
+
+  color-scheme: light;
 }
 
 * {
@@ -17,10 +24,17 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--color-background);
-  color: var(--color-primary);
+  background-color: var(--retro-bg);
+  color: var(--retro-ink);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Better default focus outline for non-tailwind elements */
+:focus-visible {
+  outline: 2px solid var(--retro-blue);
+  outline-offset: 2px;
 }
